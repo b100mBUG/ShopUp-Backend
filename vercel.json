@@ -1,0 +1,15 @@
+{
+    "version": 2,
+    "bulds": [
+        {
+            "src": "./main.py",
+            "use": "@vercel/python"
+        }
+    ],
+    "routes": [
+        {
+            "src": "/{.*}",
+            "dest": "/"
+        }
+    ]
+}
