@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from api.endpoints.accounts import router as accounts_router
 from api.endpoints.products import router as products_router
+from mangum import Mangum
 
 app = FastAPI()
 
@@ -8,4 +9,5 @@ app.include_router(accounts_router, prefix="/account", tags=["account"])
 app.include_router(products_router, prefix="/products", tags=["products"])
 
 handler = Mangum(app)
+
 
