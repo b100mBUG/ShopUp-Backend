@@ -7,3 +7,4 @@ fastapi==0.116.2
 mangum==0.15.0
 cloudinary
 passlib
+python-multipart
