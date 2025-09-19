@@ -6,3 +6,6 @@ app = FastAPI()
 
 app.include_router(accounts_router, prefix="/account", tags=["account"])
 app.include_router(products_router, prefix="/products", tags=["products"])
+
+handler = Mangum(app)
+
