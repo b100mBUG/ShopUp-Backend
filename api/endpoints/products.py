@@ -64,7 +64,7 @@ async def show_search_products(search_term: str = "None"):
     } for prod in products]
 
 @router.post("/products-add-product")
-async def append_product(product_detail: ProductIn, user_id):
+async def append_product(product_detail: ProductIn, user_id: int):
     product = await add_product(
         product_detail=product_detail.model_dump(),
         user_id=user_id,
@@ -105,3 +105,4 @@ async def delete_this_product(user_id: int, product_id: int):
         product_id=product_id
     )
     return {"message": "Product deleted successfully"}
+
